@@ -17,7 +17,7 @@ def home(request):
 #____________________________ REGISTER _____________________________________________________
 
 ''' the register or create account or signup method is responsible  for gitting the new user data making 
-sure it valid  '''
+sure it valid then add the new user to thee database '''
 
 def register_request(request):
 	if request.method == "POST":
@@ -31,6 +31,8 @@ def register_request(request):
 	form = NewUserForm()
 	return render (request=request, template_name="registeration/register.html", context={"register_form":form})
 
+
+#____________________________ LOGIN _____________________________________________________
 
 def login_request(request):
 
@@ -52,6 +54,7 @@ def login_request(request):
 	form = AuthenticationForm()
 	return render(request=request, template_name="registeration/login.html", context={"login_form":form})
 
+#____________________________ LOGOUT _____________________________________________________
 
 def logout_request(request):
 	logout(request)

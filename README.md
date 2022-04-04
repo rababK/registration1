@@ -1,4 +1,6 @@
 #__registeration__
+
+__________________________________________________
  djangoUserModel : basic registration using django,s User model with no customizatiom.
  
  _____________________________________________
